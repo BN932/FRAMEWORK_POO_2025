@@ -1,0 +1,17 @@
+{
+    "name": "poo/framework_poo_2025",
+    "autoload": {
+        "psr-4": {
+            "Core\\": "core/",
+            "App\\Controllers\\": "app/controllers/",
+            "App\\Models\\": "app/models/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Benjamin Dalemans",
+            "email": "benjamin.dalemans@gmail.com"
+        }
+    ],
+    "require": {}
+}
