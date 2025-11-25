@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Books & Authors</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="min-h-screen bg-slate-200 text-slate-800">
+    <!-- HEADER / NAV -->
+    <header class="border-b bg-white">
+      <div
+        class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3"
+      >
+        <a href="#" class="text-lg font-semibold tracking-tight">
+          My<span class="text-indigo-600">Library</span>
+        </a>
+
+        <nav>
+          <ul class="flex items-center gap-6 text-sm font-medium">
+            <li>
+              <a href="#books" class="hover:text-indigo-600">Books</a>
+            </li>
+            <li>
+              <a href="#authors" class="hover:text-indigo-600">Authors</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- MAIN LAYOUT -->
+    <main class="mx-auto max-w-6xl px-4 py-8">
+      <div class="grid gap-8 md:grid-cols-[3fr_1fr]">
+        <!-- COLONNE PRINCIPALE -->
+        <div class="space-y-10">
+          <!-- 3 DERNIERS BOOKS -->
+          <section id="books" class="space-y-4">
+            <div class="flex items-baseline justify-between gap-4">
+              <h2 class="text-xl font-semibold tracking-tight">Latest books</h2>
+              <a href="#" class="text-sm text-indigo-600 hover:underline">
+                View all books
+              </a>
+            </div>
+
+            <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <!-- BOOK CARD 1 -->
+              <article
+                class="flex flex-col rounded-xl border bg-white p-4 shadow-sm"
+              >
+                <h3 class="text-sm font-semibold text-slate-900">
+                  The Silent Forest
+                </h3>
+                <p class="mt-1 text-xs text-slate-500">by Alice Green · 2024</p>
+                <p class="mt-3 line-clamp-3 text-sm text-slate-600">
+                  A journey through an ancient forest where every tree hides a
+                  secret.
+                </p>
+                <div class="mt-4 flex items-center justify-between">
+                  <span
+                    class="rounded-full bg-indigo-50 px-2.5 py-0.5 text-xs text-indigo-700"
+                  >
+                    Fantasy
+                  </span>
+                  <a
+                    href="#"
+                    class="text-xs font-medium text-indigo-600 hover:underline"
+                  >
+                    View details
+                  </a>
+                </div>
+              </article>
+
+              <!-- BOOK CARD 2 -->
+              <article
+                class="flex flex-col rounded-xl border bg-white p-4 shadow-sm"
+              >
+                <h3 class="text-sm font-semibold text-slate-900">
+                  Cities of Glass
+                </h3>
+                <p class="mt-1 text-xs text-slate-500">by Mark Turner · 2023</p>
+                <p class="mt-3 line-clamp-3 text-sm text-slate-600">
+                  A near-future dystopia where cities are transparent, but power
+                  is not.
+                </p>
+                <div class="mt-4 flex items-center justify-between">
+                  <span
+                    class="rounded-full bg-emerald-50 px-2.5 py-0.5 text-xs text-emerald-700"
+                  >
+                    Sci-Fi
+                  </span>
+                  <a
+                    href="#"
+                    class="text-xs font-medium text-indigo-600 hover:underline"
+                  >
+                    View details
+                  </a>
+                </div>
+              </article>
+
+              <!-- BOOK CARD 3 -->
+              <article
+                class="flex flex-col rounded-xl border bg-white p-4 shadow-sm"
+              >
+                <h3 class="text-sm font-semibold text-slate-900">
+                  Between Two Tides
+                </h3>
+                <p class="mt-1 text-xs text-slate-500">by Nora Fields · 2022</p>
+                <p class="mt-3 line-clamp-3 text-sm text-slate-600">
+                  A quiet novel about love, memory and the changing sea.
+                </p>
+                <div class="mt-4 flex items-center justify-between">
+                  <span
+                    class="rounded-full bg-rose-50 px-2.5 py-0.5 text-xs text-rose-700"
+                  >
+                    Contemporary
+                  </span>
+                  <a
+                    href="#"
+                    class="text-xs font-medium text-indigo-600 hover:underline"
+                  >
+                    View details
+                  </a>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <!-- 3 DERNIERS AUTHORS -->
+          <section id="authors" class="space-y-4">
+            <div class="flex items-baseline justify-between gap-4">
+              <h2 class="text-xl font-semibold tracking-tight">
+                Latest authors
+              </h2>
+              <a href="#" class="text-sm text-indigo-600 hover:underline">
+                View all authors
+              </a>
+            </div>
+
+            <ul class="divide-y divide-slate-200 rounded-xl border bg-white">
+              <!-- AUTHOR 1 -->
+              <li class="flex items-center justify-between px-4 py-3">
+                <div>
+                  <p class="text-sm font-medium text-slate-900">Alice Green</p>
+                  <p class="text-xs text-slate-500">Genre: Fantasy · 3 books</p>
+                </div>
+                <a
+                  href="#"
+                  class="text-xs font-medium text-indigo-600 hover:underline"
+                >
+                  View author
+                </a>
+              </li>
+
+              <!-- AUTHOR 2 -->
+              <li class="flex items-center justify-between px-4 py-3">
+                <div>
+                  <p class="text-sm font-medium text-slate-900">Mark Turner</p>
+                  <p class="text-xs text-slate-500">Genre: Sci-Fi · 5 books</p>
+                </div>
+                <a
+                  href="#"
+                  class="text-xs font-medium text-indigo-600 hover:underline"
+                >
+                  View author
+                </a>
+              </li>
+
+              <!-- AUTHOR 3 -->
+              <li class="flex items-center justify-between px-4 py-3">
+                <div>
+                  <p class="text-sm font-medium text-slate-900">Nora Fields</p>
+                  <p class="text-xs text-slate-500">
+                    Genre: Contemporary · 2 books
+                  </p>
+                </div>
+                <a
+                  href="#"
+                  class="text-xs font-medium text-indigo-600 hover:underline"
+                >
+                  View author
+                </a>
+              </li>
+            </ul>
+          </section>
+        </div>
+
+        <!-- ASIDE CATEGORIES -->
+        <aside class="space-y-4">
+          <h2
+            class="text-sm font-semibold uppercase tracking-wide text-slate-500"
+          >
+            Categories
+          </h2>
+
+          <nav class="space-y-2 rounded-xl border bg-white p-4 text-sm">
+            <a
+              href="#"
+              class="flex items-center justify-between rounded-lg px-3 py-2 hover:bg-slate-50"
+            >
+              <span>All</span>
+              <span class="rounded-full bg-slate-100 px-2 text-xs">42</span>
+            </a>
+            <a
+              href="#"
+              class="flex items-center justify-between rounded-lg px-3 py-2 hover:bg-slate-50"
+            >
+              <span>Fantasy</span>
+              <span class="rounded-full bg-slate-100 px-2 text-xs">12</span>
+            </a>
+            <a
+              href="#"
+              class="flex items-center justify-between rounded-lg px-3 py-2 hover:bg-slate-50"
+            >
+              <span>Sci-Fi</span>
+              <span class="rounded-full bg-slate-100 px-2 text-xs">9</span>
+            </a>
+            <a
+              href="#"
+              class="flex items-center justify-between rounded-lg px-3 py-2 hover:bg-slate-50"
+            >
+              <span>Contemporary</span>
+              <span class="rounded-full bg-slate-100 px-2 text-xs">7</span>
+            </a>
+            <a
+              href="#"
+              class="flex items-center justify-between rounded-lg px-3 py-2 hover:bg-slate-50"
+            >
+              <span>Non-fiction</span>
+              <span class="rounded-full bg-slate-100 px-2 text-xs">14</span>
+            </a>
+          </nav>
+        </aside>
+      </div>
+    </main>
+  </body>
+</html>
