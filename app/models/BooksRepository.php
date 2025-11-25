@@ -26,7 +26,7 @@ abstract class BooksRepository
         $rs->execute();
         return $rs->fetchObject(Book::class);
     }
-    public static function findBooksByAuthorId($id): array {
+    public static function findBooksByAuthorId(int $id): array {
         $sql = "SELECT *
                 FROM books
                 WHERE books.author_id = :id;";
