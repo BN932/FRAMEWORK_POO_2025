@@ -17,4 +17,13 @@ abstract class AuthorsRepository
         $rs->execute();
         return $rs->fetchAll(PDO::FETCH_CLASS, Author::class);
     }
+    public static function findOneById(int $id): Author{
+        $sql = "SELECT *
+                FROM authors
+                WHERE authors.id = :id;";
+        $rs = DB::getConnection()->prepare($sql);
+        $rs->bindValue(':id', $id, PDO::PARAM_INT);
+        $rs->execute();
+        return $rs->fetchObject(Author::class);
+    }
 }

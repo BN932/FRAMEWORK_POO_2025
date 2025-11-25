@@ -1,7 +1,10 @@
 RewriteEngine on
 
 # ROUTES
-
+    #Books - Show
+    RewriteRule ^books/([1-9][0-9]*)$ index.php?books=show&id=$1 [L]
+    #Authors - Show
+    RewriteRule ^authors/([1-9][0-9]*)$ index.php?authors=show&id=$1 [L]
 # --------------------------------------------------
 RewriteCond %{REQUEST_URI} !\.(js|css|jpg|gif|zip|png|pdf)$ [NC]
 RewriteRule ^(.*)$ index.php [L]

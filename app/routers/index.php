@@ -5,4 +5,11 @@
 // CTRL: pagesController
 // ACTION: home
 
-\App\Controllers\PagesController::homeAction();
+    if(isset($_GET['books'])):
+        include_once '../app/routers/books.php';
+
+    elseif(isset($_GET['authors'])):
+        include_once '../app/routers/authors.php';
+    else:
+        \App\Controllers\PagesController::homeAction();
+    endif;

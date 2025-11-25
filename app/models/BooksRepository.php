@@ -17,4 +17,22 @@ abstract class BooksRepository
         $rs->execute();
         return $rs->fetchAll(PDO::FETCH_CLASS, Book::class);
     }
+    public static function findOneById(int $id): Book{
+        $sql = "SELECT *
+                FROM books
+                WHERE books.id = :id;";
+        $rs = DB::getConnection()->prepare($sql);
+        $rs->bindValue(':id', $id, PDO::PARAM_INT);
+        $rs->execute();
+        return $rs->fetchObject(Book::class);
+    }
+    public static function findBooksByAuthorId($id): array {
+        $sql = "SELECT *
+                FROM books
+                WHERE books.author_id = :id;";
+        $rs = DB::getConnection()->prepare($sql);
+        $rs->bindValue(':id', $id, PDO::PARAM_INT);
+        $rs->execute();
+        return $rs->fetchAll(PDO::FETCH_CLASS, Book::class);
+    }
 }
