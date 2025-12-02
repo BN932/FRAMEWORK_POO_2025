@@ -1,8 +1,12 @@
 RewriteEngine on
 
 # ROUTES
+    #Books - Index
+    RewriteRule ^books$ index.php?books=index [L]
     #Books - Show
     RewriteRule ^books/([1-9][0-9]*)$ index.php?books=show&id=$1 [L]
+    #Authors - Index
+    RewriteRule ^authors$ index.php?authors=index [L]
     #Authors - Show
     RewriteRule ^authors/([1-9][0-9]*)$ index.php?authors=show&id=$1 [L]
 # --------------------------------------------------

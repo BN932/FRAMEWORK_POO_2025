@@ -40,4 +40,18 @@ abstract class Helpers
         // Return result
         return $text;
     }
+    protected static $_name_lwc_pl, $_name_lwc_sg, $_class;
+    protected static function init(){
+        $array = explode('\\', static::class);
+        $fullname = end($array);
+        $array = preg_split('/(?=[A-Z])/', $fullname);
+        self::$_class = $array[1];
+        self::$_name_lwc_pl = strtolower(self::$_class);
+        self::$_name_lwc_sg = substr(self::$_name_lwc_pl, 0, -1);
+        if(substr(self::$_class,-1)==='y'):
+            self::$_class = 'App\Models\\'.substr(self::$_class, 0, -2);
+        else : 
+            self::$_class = 'App\Models\\'.substr(self::$_class, 0, -1);
+        endif;
+    }
 }

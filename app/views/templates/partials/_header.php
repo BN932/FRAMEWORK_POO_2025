@@ -9,10 +9,10 @@
         <nav>
             <ul class="flex items-center gap-6 text-sm font-medium">
                 <li>
-                    <a href="#books" class="hover:text-indigo-600">Books</a>
+                    <a href="books" class="hover:text-indigo-600">Books</a>
                 </li>
                 <li>
-                    <a href="#authors" class="hover:text-indigo-600">Authors</a>
+                    <a href="authors" class="hover:text-indigo-600">Authors</a>
                 </li>
             </ul>
         </nav>

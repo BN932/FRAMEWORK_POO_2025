@@ -1,4 +1,4 @@
-<h2>Latest books</h2>
+<h2>Our books</h2>
 <ul>
     <?php foreach ($books as $book): ?>
         <li>
