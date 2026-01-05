@@ -50,6 +50,9 @@ abstract class Helpers
         self::$_name_lwc_sg = substr(self::$_name_lwc_pl, 0, -1);
         if(substr(self::$_class,-1)==='y'):
             self::$_class = 'App\Models\\'.substr(self::$_class, 0, -2);
+        elseif((substr(self::$_class,-2,)==='es')):
+            self::$_class = 'App\Models\\'.substr(self::$_class, 0, -3);
+            self::$_class.='y';
         else : 
             self::$_class = 'App\Models\\'.substr(self::$_class, 0, -1);
         endif;

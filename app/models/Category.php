@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
-class Category {
-    public $id, $name, $created_at;
+use \Core\Model;
+
+class Category extends Model {
+    public $name;
 }
